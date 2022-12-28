@@ -56,3 +56,29 @@ update novels set name="Harry Potter 2" where id =1;
 ```
 delete from novels where id =1;
 ```
+
+
+## Setup for the project
+
+```
+cp .env.example .env
+npm i
+```
+
+## Cli
+
+```
+node cli
+```
+
+## Server
+
+```
+node server
+```
+
+dev
+
+```
+npm run dev
+```
