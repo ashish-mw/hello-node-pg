@@ -19,7 +19,7 @@ function insertNovel(title) {
 }
 
 function fetchAllNovels() {
-  return db.query(`SELECT id, title FROM novels`);
+  return db.query(`SELECT id, title FROM novels ORDER BY id DESC`);
 }
 
 function getNovel(id) {
@@ -35,7 +35,7 @@ function updateNovel(id, title) {
 }
 
 function deleteNovel(id) {
-  const query = `DELETE FROM novels WHERE id=$1`;
+  const query = `DELETE FROM novels WHERE id=$1 RETURNING *`;
   return db.query(query, [id]);
 }
 
